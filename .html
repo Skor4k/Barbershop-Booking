@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Barbershop Booking</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    .services {
+      display: flex;
+      justify-content: space-around;
+      width: 80%;
+      margin: 2rem auto;
+      border: 1px solid #fff;
+      padding: 1rem;
+    }
+
+    .service-card {
+      border: 1px solid #fff;
+      padding: 1rem;
+      width: 30%;
+      text-align: center;
+    }
+
+    .booking-form {
+      background: #111;
+      padding: 2rem;
+      border: 1px solid #fff;
+      width: 50%;
+    }
+
+    .booking-form h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    input, select, button, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #fff;
+      background-color: #000;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background-color: #333;
+      cursor: pointer;
+    }
+
+    .reviews {
+      width: 50%;
+      background: #111;
+      padding: 2rem;
+      border: 1px solid #fff;
+      margin-top: 2rem;
+    }
+
+    .reviews h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .review-item {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #fff;
+      padding-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Black & White Barbershop</h1>
+    <p>Стильные стрижки в классическом черно-белом стиле</p>
+  </header>
+
+  <section class="services">
+    <div class="service-card">
+      <h3>Мужская стрижка</h3>
+      <p>Классическая и современная стилистика</p>
+    </div>
+    <div class="service-card">
+      <h3>Женская стрижка</h3>
+      <p>Индивидуальный подход и стиль</p>
+    </div>
+    <div class="service-card">
+      <h3>Стрижка детей</h3>
+      <p>Аккуратно и безопасно</p>
+    </div>
+  </section>
+
+  <section class="booking-form">
+    <h2>Запишитесь на стрижку</h2>
+    <form action="https://formsubmit.co/example-email" method="POST">
+      <div class="form-group">
+        <label for="name">Ваше имя:</label>
+        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+      </div>
+      <div class="form-group">
+        <label for="service">Выберите услугу:</label>
+        <select id="service" name="service" required>
+          <option value="Мужская стрижка">Мужская стрижка</option>
+          <option value="Женская стрижка">Женская стрижка</option>
+          <option value="Стрижка детей">Стрижка детей</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">Время:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <button type="submit">Записаться</button>
+    </form>
+  </section>
+
+  <section class="reviews">
+    <h2>Отзывы клиентов</h2>
+    <div class="review-item">
+      <p>Отличная стрижка, рекомендую! — Иван</p>
+    </div>
+    <div class="review-item">
+      <p>Очень профессионально и стильно! — Мария</p>
+    </div>
+    <form action="https://formsubmit.co/example-email" method="POST">
+      <h3>Оставьте ваш отзыв:</h3>
+      <div class="form-group">
+        <label for="review">Ваш отзыв:</label>
+        <textarea id="review" name="review" rows="4" placeholder="Введите ваш отзыв" required></textarea>
+      </div>
+      <button type="submit">Отправить отзыв</button>
+    </form>
+  </section>
+</body>
+</html>
